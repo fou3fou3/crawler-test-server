@@ -31,6 +31,7 @@ func homeHandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "<html><head>")
 
 	// Not neccessary just to test youre metadata collection
+	fmt.Fprintf(w, `<title> Robot Test Situation </title>`)
 	fmt.Fprintf(w, `<meta property="og:description" content="Home page for robots test situation">`)
 	fmt.Fprintf(w, `<meta property="og:site_name" content="Robots Test Situation">`)
 	fmt.Fprintf(w, `<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/2433/2433036.png">`)
