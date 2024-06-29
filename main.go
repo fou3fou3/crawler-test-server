@@ -3,9 +3,11 @@ package main
 import (
 	"net/http"
 	"os"
-	"test-server/situations/robotsSituation"
 
+	// "test-server/situations/robotsSituation"
 	// "test-server/situations/speedSituation"
+
+	"test-server/situations/textDocumentSituation"
 
 	"github.com/charmbracelet/log"
 )
@@ -27,7 +29,10 @@ func main() {
 	// Tests how fast is your crawler change the nPages constant at top for specefic number of pages to test on
 	// speedSituation.Situation()
 
-	robotsSituation.Situation()
+	// Test if your crawler is fetching and using robots correctly
+	//robotsSituation.Situation()
+
+	textDocumentSituation.Situation()
 
 	log.Fatal(http.ListenAndServe(serverPort, nil))
 }

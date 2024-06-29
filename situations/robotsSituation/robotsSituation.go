@@ -24,6 +24,7 @@ func Situation() {
 
 func robotsHandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintln(w, `User-agent: *`)
+	fmt.Fprintln(w, "")
 	fmt.Fprintln(w, `Disallow: /unallowed`)
 }
 
