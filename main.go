@@ -3,11 +3,11 @@ package main
 import (
 	"net/http"
 	"os"
+	"test-server/situations/pdfDocumentSituation"
 
 	// "test-server/situations/robotsSituation"
 	// "test-server/situations/speedSituation"
-
-	"test-server/situations/textDocumentSituation"
+	//"test-server/situations/textDocumentSituation"
 
 	"github.com/charmbracelet/log"
 )
@@ -29,10 +29,14 @@ func main() {
 	// Tests how fast is your crawler change the nPages constant at top for specefic number of pages to test on
 	// speedSituation.Situation()
 
-	// Test if your crawler is fetching and using robots correctly
-	//robotsSituation.Situation()
+	// Tests if your crawler is fetching and using robots correctly
+	// robotsSituation.Situation()
 
-	textDocumentSituation.Situation()
+	// Tests if your crawler is able to crawl text/plain documents with no problems
+	// textDocumentSituation.Situation()
+
+	// Tests if your crawler is able to crawl application/pdf documents with no problems
+	pdfDocumentSituation.Situation()
 
 	log.Fatal(http.ListenAndServe(serverPort, nil))
 }
